@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Designed & Developed by
+
+ ██████╗     ██████╗  ██████╗ ██╗  ██╗██╗████████╗
+██╔════╝     ██╔══██╗██╔═══██╗██║  ██║██║╚══██╔══╝
+██║  ███╗    ██████╔╝██║   ██║███████║██║   ██║   
+██║   ██║    ██╔══██╗██║   ██║██╔══██║██║   ██║   
+╚██████╔╝    ██║  ██║╚██████╔╝██║  ██║██║   ██║   
+ ╚═════╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝   
+                                                  
+
+https://www.linkedin.com/in/grohit19/
+-->
+<head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142315691-1"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+  
+          gtag('config', 'UA-142315691-1');
+      </script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scratch card like google pay | G Rohit</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600,700|Open+Sans:400,600,700&display=swap"
+    rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon//favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicon//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+        <h1 class="title">Scratch and win</h1>
+    <div class="container">
+
+    <div id="scratchCard">
+
+    </div>
+    <button class="btn" value="Reset" onclick="$('#scratchCard').wScratchPad('reset');"/>Reset</button>
+
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/wScratchPad.min.js"></script>
+    <script>
+    $('#scratchCard').wScratchPad({
+    size        : 70,          // The size of the brush/scratch.
+    bg          : './images/winning-card.jpg',  // Background (image path or hex color).
+    // fg          : '#0195FF',  // Foreground (image path or hex color).
+    fg          : './images/google-scratch-card.jpg',  // Foreground (image path or hex color).
+    realtime    : true,       // Calculates percentage in realitime.
+    scratchDown: null, 
+    // function(e, percent){ console.log("scratchDown:" + percent); },
+  scratchMove: function(e, percent){ 
+    // console.log("scratchMove:" + percent); 
+if(percent > 50){
+    this.clear();
+}
+},
+  scratchUp: null, 
+  // function(e, percent){ console.log("scratchUp:" +  percent); },
+  cursor      : 'pointer' // Set cursor.
+  });
+
+
+ 
+    </script>
+</body>
+<div class="goBack">
+    <p><a onclick="window.location='http://www.grohit.com/#projects'" target="_self" aria-label="Projects" style="text-decoration: underline;cursor: pointer;">Back to all projects</a></p>
+</div>
+<div class="pageContentWrapper"></div>
+<footer>
+        &copy; Developed by <a href="https://grohit.com/">G Rohit</a>
+    </footer>
+</html>
